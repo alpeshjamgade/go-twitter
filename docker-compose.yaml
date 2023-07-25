@@ -35,7 +35,7 @@ services:
       mode: replicated
       replicas: 1
     volumes:
-      - ".db-data/redis:/data"
+      - "./db-data/redis:/data"
     command: redis-server --requirepass password
 
   postgres:
