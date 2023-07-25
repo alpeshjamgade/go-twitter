@@ -20,11 +20,11 @@ type Models struct {
 
 type User struct {
 	ID        int       `json:"id"`
-	Email     string    `json:"email"`
-	FirstName string    `json:"first_name,omitempty"`
-	LastName  string    `json:"last_name,omitempty"`
-	Password  string    `json:"-"`
-	Status    bool      `json:"status"`
+	Email     string    `json:"email" validate:"required,email"`
+	FirstName string    `json:"first_name,omitempty" validate:"required"`
+	LastName  string    `json:"last_name,omitempty" validate:"required"`
+	Password  string    `json:"password" validate:"required"`
+	Status    string    `json:"status"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 }
