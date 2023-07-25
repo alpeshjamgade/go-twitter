@@ -1,3 +1,6 @@
-authentication-service/build/authApp
-user-service/build/userApp
+authentication-service/build/*
+user-service/build/*
+db-data/*
 
+go-twitter.iml
+sqldialects.xml
